@@ -12,6 +12,7 @@ const doctorRouter = require('./routes/doctorRoutes');
 const userRouter = require('./routes/userRoutes');
 const reviewRouter = require('./routes/reviewRoutes');
 const medicineRouter = require('./routes/medicineRoutes');
+const bloodRouter=require('./routes/bloodRoutes');
 
 const app = express();
 const corsOptions = {
@@ -60,6 +61,7 @@ app.use('/api/v1/doctors', doctorRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/reviews', reviewRouter);
 app.use('/api/v1/medicine', medicineRouter);
+app.use('/api/v1/blood',bloodRouter);
 
 app.all('*', (req, res, next) => {
   console.log('generic Function is called');
